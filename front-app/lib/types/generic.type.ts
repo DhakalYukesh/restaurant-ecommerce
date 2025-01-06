@@ -1,6 +1,7 @@
 export interface ButtonProps {
   title: string;
-  href: string;
   onClick?: () => void;
+  href: string;
+  variant?: 'white' | 'black';
   className?: string;
 }
