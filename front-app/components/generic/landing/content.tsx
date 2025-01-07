@@ -4,14 +4,13 @@ const Content = () => {
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Left Column - Text and Interior Image */}
         <div className="space-y-8">
           <div className="max-w-xl">
-            <h2 className="text-4xl font-bold tracking-tight mb-6">
+            <h1 className="text-5xl font-bold tracking-tight mb-6">
               Discover the Good
               <br />
               Atmosphere of NYUS.
-            </h2>
+            </h1>
             <p className="text-gray-600 leading-relaxed">
               Neque elit, rutrum in laoreet nec eget scelerisque volutpat sit.
               Bibendum tincidunt a scelerisque consectetur ultrices elementum

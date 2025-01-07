@@ -4,12 +4,7 @@ export default function Hero() {
   return (
     <div className="min-h-screen">
       <section className="relative min-h-screen">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/images/landing.jpg')",
-          }}
-        >
+        <div className="absolute inset-0 bg-[url('/images/landing.jpg')] bg-cover bg-center bg-no-repeat">
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 

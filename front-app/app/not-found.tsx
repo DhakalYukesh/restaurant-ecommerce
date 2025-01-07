@@ -1,9 +1,10 @@
 import Button from "@/components/generic/button";
+import Footer from "@/components/generic/footer";
 import Navbar from "@/components/generic/navbar";
 
 const page = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <div className="py-20 bg-gray-100">
         <div className="web-container bg-white">
@@ -24,7 +25,8 @@ const page = () => {
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
