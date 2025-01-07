@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Button from "./Button";
 import { navigationItems } from "@/lib/constant/generic.constant";
+import Button from "./button";
 
 const Navbar = () => {
   return (
