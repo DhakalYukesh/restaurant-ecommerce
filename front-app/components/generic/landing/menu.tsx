@@ -1,5 +1,13 @@
 import Button from "../button";
 
+// TODO: Remove this data and fetch from API
+const menuData = [
+  { title: "Lemon and Garlic Green Beans", price: "15.00" },
+  { title: "Bacon-wrapped Shrimp with Garlic", price: "21.50" },
+  { title: "LAMB-BEEF KOFKA SKEWERS WITH TZATZIKI", price: "18.50" },
+  { title: "Imported Oysters Grill (5 Pieces)", price: "20.00" },
+];
+
 const Menu = () => {
   return (
     <section className="bg-zinc-900 px-4 py-16 text-white">
@@ -8,7 +16,6 @@ const Menu = () => {
           <h2 className="text-sm tracking-wider font-semibold mb-5">
             Our Menu
           </h2>
-
           <div className="flex items-center gap-6">
             <div className="h-px bg-white/50 flex-1" />
             <h1 className="mb-6 text-5xl font-bold">Get Relax. Eat.</h1>
@@ -23,83 +30,27 @@ const Menu = () => {
 
         <div className="mb-12 grid gap-x-8 gap-y-8 md:grid-cols-2">
           <div className="space-y-8">
-            <div className="border-b border-zinc-500 pb-6">
-              <div className="mb-2 flex items-center justify-between">
-                <h4 className="font-medium">Lemon and Garlic Green Beans</h4>
-                <span className="text-zinc-400">- 15.00</span>
+            {menuData.map((item, index) => (
+              <div key={index} className="border-b border-zinc-500 pb-6">
+                <div className="mb-2 flex items-center justify-between">
+                  <h4 className="font-medium">{item.title}</h4>
+                  <span className="text-zinc-400">- {item.price}</span>
+                </div>
+                <p className="text-sm text-zinc-500">Bacon / Shrimp / Garlic</p>
               </div>
-              <p className="text-sm text-zinc-500">Lemon / Garlic / Beans</p>
-            </div>
-
-            <div className="border-b border-zinc-500 pb-6">
-              <div className="mb-2 flex items-center justify-between">
-                <h4 className="font-medium">
-                  Bacon-wrapped Shrimp with Garlic
-                </h4>
-                <span className="text-zinc-400">- 21.50</span>
-              </div>
-              <p className="text-sm text-zinc-500">Bacon / Shrimp / Garlic</p>
-            </div>
-
-            <div className="border-b border-zinc-500 pb-6">
-              <div className="mb-2 flex items-center justify-between">
-                <h4 className="font-medium">
-                  LAMB-BEEF KOFKA SKEWERS WITH TZATZIKI
-                </h4>
-                <span className="text-zinc-400">- 18.50</span>
-              </div>
-              <p className="text-sm text-zinc-500">Lamb / Wine / Butter</p>
-            </div>
-
-            <div className="border-b border-zinc-500 pb-6">
-              <div className="mb-2 flex items-center justify-between">
-                <h4 className="font-medium">
-                  Imported Oysters Grill (5 Pieces)
-                </h4>
-                <span className="text-zinc-400">- 20.00</span>
-              </div>
-              <p className="text-sm text-zinc-500">Oysters / Veggie / Ginger</p>
-            </div>
+            ))}
           </div>
 
           <div className="space-y-8">
-            <div className="border-b border-zinc-500 pb-6">
-              <div className="mb-2 flex items-center justify-between">
-                <h4 className="font-medium">Lemon and Garlic Green Beans</h4>
-                <span className="text-zinc-400">- 15.00</span>
+            {menuData.map((item, index) => (
+              <div key={index} className="border-b border-zinc-500 pb-6">
+                <div className="mb-2 flex items-center justify-between">
+                  <h4 className="font-medium">{item.title}</h4>
+                  <span className="text-zinc-400">- {item.price}</span>
+                </div>
+                <p className="text-sm text-zinc-500">Bacon / Shrimp / Garlic</p>
               </div>
-              <p className="text-sm text-zinc-500">Lemon / Garlic / Beans</p>
-            </div>
-
-            <div className="border-b border-zinc-500 pb-6">
-              <div className="mb-2 flex items-center justify-between">
-                <h4 className="font-medium">
-                  Bacon-wrapped Shrimp with Garlic
-                </h4>
-                <span className="text-zinc-400">- 21.50</span>
-              </div>
-              <p className="text-sm text-zinc-500">Bacon / Shrimp / Garlic</p>
-            </div>
-
-            <div className="border-b border-zinc-500 pb-6">
-              <div className="mb-2 flex items-center justify-between">
-                <h4 className="font-medium">
-                  LAMB-BEEF KOFKA SKEWERS WITH TZATZIKI
-                </h4>
-                <span className="text-zinc-400">- 18.50</span>
-              </div>
-              <p className="text-sm text-zinc-500">Lamb / Wine / Butter</p>
-            </div>
-
-            <div className="border-b border-zinc-500 pb-6">
-              <div className="mb-2 flex items-center justify-between">
-                <h4 className="font-medium">
-                  Imported Oysters Grill (5 Pieces)
-                </h4>
-                <span className="text-zinc-400">- 20.00</span>
-              </div>
-              <p className="text-sm text-zinc-500">Oysters / Veggie / Ginger</p>
-            </div>
+            ))}
           </div>
         </div>
 
