@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Content = () => {
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto relative">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
           <div className="max-w-xl">
@@ -74,12 +74,12 @@ const Content = () => {
         </div>
       </div>
 
-      <div className="flex justify-center mt-16">
+      <div className="absolute bottom-[-70px] flex justify-center mt-16">
         <Image
           src="/images/blueberry.png"
           alt="Breakfast dish with blueberries"
-          width={200}
-          height={200}
+          width={500}
+          height={500}
           className="rounded-full"
         />
       </div>

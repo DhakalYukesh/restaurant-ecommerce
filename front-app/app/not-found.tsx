@@ -5,7 +5,7 @@ import Navbar from "@/components/generic/navbar";
 const page = () => {
   return (
     <>
-      <Navbar />
+      <Navbar solid />
       <div className="py-20 bg-gray-100">
         <div className="web-container bg-white">
           <div className="p-20 text-center flex flex-col items-center">

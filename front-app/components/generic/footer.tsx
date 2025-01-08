@@ -1,6 +1,7 @@
 import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import Button from "./button";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -10,37 +11,28 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-28">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold flex items-center gap-2 tracking-widest uppercase">
-              Joofi
-            </h3>
+            <div className="flex items-center gap-2">
+              <Image src="/images/logo.png" alt="Logo" width={30} height={30} />
+              <h3 className="text-2xl font-bold flex items-center gap-2 tracking-widest uppercase">
+                Joofi
+              </h3>
+            </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Egestas sit in lobortis duis viverra enim eros ornare. Et
               tincidunt pretium curabitur vehicula turpis adipiscing donec. Et
               ut morbi magna quis purus aliquet.
             </p>
             <div className="flex gap-4">
-              <Link
-                href="#"
-                className="hover:text-blue-400 transition-colors"
-              >
+              <Link href="#" className="hover:text-blue-400 transition-colors">
                 <FaFacebook size={20} />
               </Link>
-              <Link
-                href="#"
-                className="hover:text-blue-400 transition-colors"
-              >
+              <Link href="#" className="hover:text-blue-400 transition-colors">
                 <FaTwitter size={20} />
               </Link>
-              <Link
-                href="#"
-                className="hover:text-blue-400 transition-colors"
-              >
+              <Link href="#" className="hover:text-blue-400 transition-colors">
                 <FaYoutube size={20} />
               </Link>
-              <Link
-                href="#"
-                className="hover:text-blue-400 transition-colors"
-              >
+              <Link href="#" className="hover:text-blue-400 transition-colors">
                 <FaInstagram size={20} />
               </Link>
             </div>
@@ -97,11 +89,7 @@ const Footer = () => {
                   <p>9AM - 12.30AM</p>
                 </div>
               </div>
-              <Button
-                variant="black"
-                title="Reservation"
-                href="/reservation"
-              />
+              <Button variant="black" title="Reservation" href="/reservation" />
             </div>
           </div>
         </div>
@@ -109,7 +97,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="border-t border-gray-800 pt-6 pb-6 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-            <p>Copyright © 2025 Deli Restaurant</p>
+            <p>Copyright © 2025 Joofi Restaurant</p>
             <p>Visit Joofi Restaurant Today</p>
           </div>
         </div>
