@@ -2,15 +2,15 @@ const SIGNATUREMENU = () => {
   return (
     <section className="relative min-h-96 w-full overflow-hidden">
       <div
-        className="absolute inset-0 bg-[url('/images/signature.jpg')] bg-cover bg-center "
+        className="absolute inset-0 bg-[url('/images/signature.jpg')] bg-cover bg-center bg-no-repeat"
         aria-hidden="true"
       >
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       <div className="relative z-10 ml-28 flex flex-col justify-center h-full mt-10 pt-10 max-w-4xl mx-auto px-6">
-        <div className="container mx-auto h-full flex flex-col justify-center px-6">
-          <div className="container max-w-2xl space-y-6">
+        <div className="web-container h-full flex flex-col justify-center px-6">
+          <div className="web-container space-y-6">
             <p className="text-white text-sm tracking-wide font-semibold">
               Homemade
             </p>
