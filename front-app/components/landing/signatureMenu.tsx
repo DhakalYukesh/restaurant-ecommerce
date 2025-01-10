@@ -1,4 +1,4 @@
-const SIGNATUREMENU = () => {
+const SignatureMenu = () => {
   return (
     <section className="relative min-h-96 w-full overflow-hidden">
       <div
@@ -29,4 +29,4 @@ const SIGNATUREMENU = () => {
   );
 };
 
-export default SIGNATUREMENU;
+export default SignatureMenu;

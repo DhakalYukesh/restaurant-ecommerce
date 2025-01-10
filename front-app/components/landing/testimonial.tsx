@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const TESTIMONIAL = () => {
+const Testimonial = () => {
   return (
     <div className="min-h-64 bg-black/90 flex flex-col items-center justify-center py-20 relative overflow-hidden">
       <div className="absolute inset-0 z-0 bg-[url('/images/test.jpg')] bg-cover bg-center bg-no-repeat opacity-30" />
@@ -58,4 +58,4 @@ const TESTIMONIAL = () => {
   );
 };
 
-export default TESTIMONIAL;
+export default Testimonial;

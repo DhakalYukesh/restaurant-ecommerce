@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const TEAM = () => {
+const Team = () => {
   return (
     <section className="web-container px-4 py-16">
       <div className="max-w-xl mb-12 mt-32">
@@ -25,13 +25,13 @@ const TEAM = () => {
             className="object-cover mb-14"
           />
         </div>
-          <Image
-            src="/images/chef-1.jpg"
-            alt="Barista with a drink"
-            width={350}
-            height={300}
-            className="object-cover absolute top-[-200px] right-[178px]"
-          />
+        <Image
+          src="/images/chef-1.jpg"
+          alt="Barista with a drink"
+          width={350}
+          height={300}
+          className="object-cover absolute top-[-200px] right-[178px]"
+        />
         <div className="mt-[26rem] mb-24">
           <Image
             src="/images/chef-3.jpg"
@@ -45,4 +45,4 @@ const TEAM = () => {
   );
 };
 
-export default TEAM;
+export default Team;
