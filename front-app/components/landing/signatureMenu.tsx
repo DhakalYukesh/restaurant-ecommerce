@@ -8,7 +8,7 @@ const SIGNATUREMENU = () => {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative z-10 ml-28 flex flex-col justify-center h-full mt-10 pt-10 max-w-4xl mx-auto px-6">
+      <div className="relative mr-32 z-10 ml-28 flex flex-col justify-center h-full mt-10 pt-10 max-w-4xl mx-auto px-6">
         <div className="web-container h-full flex flex-col justify-center px-6">
           <div className="web-container space-y-6">
             <p className="text-white text-sm tracking-wide font-semibold">
