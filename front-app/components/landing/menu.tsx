@@ -1,4 +1,4 @@
-import Button from "../button";
+import Button from "../generic/button";
 
 // TODO: Remove this data and fetch from API
 const menuData = [
@@ -10,8 +10,8 @@ const menuData = [
 
 const Menu = () => {
   return (
-    <section className="bg-zinc-900 px-4 py-16 text-white">
-      <div className="web-container mx-auto max-w-5xl">
+    <section className="bg-primary px-4 py-16 text-white">
+      <div className="web-container">
         <div className="mb-12 text-center">
           <h2 className="text-sm tracking-wider font-semibold mb-5">
             Our Menu
