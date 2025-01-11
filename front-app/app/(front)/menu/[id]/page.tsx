@@ -9,8 +9,8 @@ interface IParams {
   };
 }
 
-const page = ({ params }: IParams) => {
-  const { id } = params;
+const page = async ({ params }: IParams) => {
+  const { id } = await params;
   const menuItem = menuItems.find((item) => item.id === id);
 
   if (!menuItem) {
