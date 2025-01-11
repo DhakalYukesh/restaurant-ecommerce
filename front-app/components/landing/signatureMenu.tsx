@@ -2,7 +2,7 @@ const SignatureMenu = () => {
   return (
     <section className="relative min-h-96 w-full overflow-hidden">
       <div
-        className="absolute inset-0 bg-[url('/images/signature.jpg')] bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-[url('/images/relax-atmosphere.jpg')] bg-cover bg-center bg-no-repeat"
         aria-hidden="true"
       >
         <div className="absolute inset-0 bg-black/50" />

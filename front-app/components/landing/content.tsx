@@ -74,7 +74,7 @@ const Content = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-[-70px] flex justify-center mt-16">
+      <div className="hidden absolute bottom-[-70px] md:flex justify-center mt-16">
         <Image
           src="/images/blueberry.png"
           alt="Breakfast dish with blueberries"
