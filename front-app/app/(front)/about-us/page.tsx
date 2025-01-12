@@ -1,7 +1,5 @@
-import AboutUs from "@/components/about/aboutUs";
 import OurStory from "@/components/about/ourStory";
 import TitleBanner from "@/components/generic/title-banner";
-import React from "react";
 
 const page = () => {
   return (
@@ -12,7 +10,6 @@ const page = () => {
       >
         About Us
       </TitleBanner>
-      <AboutUs />
       <OurStory />
     </>
   );
