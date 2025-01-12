@@ -6,7 +6,7 @@ interface TitleBannerProps {
 
 const TitleBanner = ({ children, src, subText }: TitleBannerProps) => {
   return (
-    <div className="relative w-full h-[450px]">
+    <div className="relative w-full h-[500px]">
       <div
         className="absolute inset-0 w-full h-full"
         style={{
