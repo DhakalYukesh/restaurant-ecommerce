@@ -1,3 +1,4 @@
+import OurSpeciality from "@/components/about/ourSpeciality";
 import OurStory from "@/components/about/ourStory";
 import TitleBanner from "@/components/generic/title-banner";
 
@@ -11,6 +12,7 @@ const page = () => {
         About Us
       </TitleBanner>
       <OurStory />
+      <OurSpeciality />
     </>
   );
 };
