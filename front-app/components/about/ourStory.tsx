@@ -5,9 +5,9 @@ import { SiApplemusic } from "react-icons/si";
 
 const OurStory = () => {
   return (
-    <section className="web-container px-4 py-16 md:py-24">
+    <section className="web-container px-4 py-16 md:py-24 relative">
       <div className="grid gap-16">
-        <div className="flex justify-between mb-14">
+        <div className="flex justify-between mb-16">
           <h1 className="text-5xl font-bold text-center flex">Our Story</h1>
           <div className="flex flex-col w-[746px] gap-4 text-gray-500">
             <p>
@@ -34,7 +34,9 @@ const OurStory = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-2">Hand-crafted Decor</h3>
+              <h3 className="text-xl font-bold mb-2">
+                Hand-crafted Decoration
+              </h3>
               <p className="text-gray-500">
                 In total 650m² mix of styles and colors.
               </p>
@@ -63,20 +65,20 @@ const OurStory = () => {
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2">Relax Atmosphere</h3>
-              <p className="text-gray-500">
+              <p className="text-gray-500 w-[300px]">
                 Take refuge in our greenery and away from the crowds.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="relative">
+        <div className="absolute right-[120px] bottom-[-80px]">
           <Image
             src="/images/story.jpg"
             alt="Aerial view of our cafe interior"
-            width={800}
-            height={600}
-            className="w-full aspect-[4/3] object-cover"
+            width={640}
+            height={640}
+            className="w-full aspect-[4/3] object-cover "
           />
         </div>
       </div>
