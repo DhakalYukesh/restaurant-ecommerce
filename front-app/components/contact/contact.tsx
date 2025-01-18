@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent } from "react";
-import Button from "../generic/button";
+import Button from "../generic/Button";
 
 const Contact = () => {
   const handleSubmit = (e: FormEvent) => {

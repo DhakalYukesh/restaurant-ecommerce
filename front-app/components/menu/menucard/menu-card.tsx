@@ -1,8 +1,10 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { BsCart } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/store/slices/cart.slice";
+import { useToast } from "@/hooks/use-toast";
 
 interface MenuCardProps {
   id: string;
@@ -19,6 +21,19 @@ const MenuCard: FC<MenuCardProps> = ({
   image,
   description,
 }) => {
+  const dispatch = useDispatch();
+  const { toast } = useToast()
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
+    dispatch(addToCart({ id, name, price }));
+    toast({
+      title: "Added to cart",
+      description: `${name} added to cart`,
+      className: "bg-green-500 text-white py-4",
+    })
+  };
+
   return (
     <div className="group relative border border-gray-100 bg-white">
       <Link href={`/menu/${id}`}>
@@ -40,10 +55,7 @@ const MenuCard: FC<MenuCardProps> = ({
               ${price.toFixed(2)}
             </span>
             <button
-              onClick={(e) => {
-                e.preventDefault();
-                // Add to cart logic here
-              }}
+              onClick={handleAddToCart}
               className="text-primary hover:text-primary/90 transition-colors"
             >
               <div className="bg-primary text-white p-2 rounded-full hover:bg-primary/90 transition-colors ease-in-out duration-300"> 

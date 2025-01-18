@@ -12,3 +12,9 @@
   padding: 0 1rem;
 }
 
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+

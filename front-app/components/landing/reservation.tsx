@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../generic/button";
+import Button from "../generic/Button";
 
 interface ReservationProps {
   subtitle?: string;

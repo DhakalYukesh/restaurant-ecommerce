@@ -5,10 +5,10 @@ import Image from "next/image";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
-import Button from "@/components/generic/button";
 import { menuItems } from "@/lib/constant/menu.constant";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
+import Button from "@/components/generic/Button";
 
 interface MenuCardDetailProps {
   item: {
@@ -102,7 +102,7 @@ const MenuCardDetail = ({ item }: MenuCardDetailProps) => {
 
               <div className="space-y-2">
                 <Button className="w-full" href="" title="Add to Cart" />
-                <Button className="w-full border-blue-500 text-white bg-blue-500 hover:bg-blue-600" href="" title="Buy Now" />
+                <Button className="w-full" href="/checkout" title="Buy Now" />
               </div>
             </div>
 
