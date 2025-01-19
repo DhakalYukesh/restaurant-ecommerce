@@ -1,5 +1,6 @@
 import OurSpeciality from "@/components/about/ourSpeciality";
 import OurStory from "@/components/about/ourStory";
+import Team from "@/components/about/team1";
 import TitleBanner from "@/components/generic/title-banner";
 
 const page = () => {
@@ -13,6 +14,7 @@ const page = () => {
       </TitleBanner>
       <OurStory />
       <OurSpeciality />
+      <Team />
     </>
   );
 };
