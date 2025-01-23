@@ -1,4 +1,4 @@
-import Button from "../generic/button";
+import Button from "../generic/Button";
 
 // TODO: Remove this data and fetch from API
 const menuData = [

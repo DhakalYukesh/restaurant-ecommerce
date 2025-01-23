@@ -1,28 +1,36 @@
 "use client";
+
+import { useState } from "react";
 import { menuItems } from "@/lib/constant/menu.constant";
 import MenuCard from "./menucard/menu-card";
 import MenuDropdown from "./menudropdown/menudropdown";
 import { useMenuFilter } from "@/lib/hooks/useMenuFilter";
-import { useState } from "react";
-import ReactPaginate from "react-paginate";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 const MenuPage = () => {
-  const ITEMS_PER_PAGE = 9;
-  const [itemOffset, setItemOffset] = useState(0);
+  const ITEMS_PER_PAGE = 6;
+  const [currentPage, setCurrentPage] = useState(1);
   const { filters, setFilters, filteredItems } = useMenuFilter(menuItems);
 
-  const endOffset = itemOffset + ITEMS_PER_PAGE;
-  const currentItems = filteredItems.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
+  const offset = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentItems = filteredItems.slice(offset, offset + ITEMS_PER_PAGE);
 
-  const handlePageClick = (event: { selected: number }) => {
-    const newOffset = (event.selected * ITEMS_PER_PAGE) % filteredItems.length;
-    setItemOffset(newOffset);
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
   };
 
   const handleFilterChange = (newFilters: typeof filters) => {
     setFilters(newFilters);
-    setItemOffset(0);
+    setCurrentPage(1);
   };
 
   return (
@@ -45,21 +53,51 @@ const MenuPage = () => {
             ))}
           </div>
           <div className="mt-8 flex justify-center">
-            <ReactPaginate
-              breakLabel="..."
-              nextLabel=">"
-              onPageChange={handlePageClick}
-              pageRangeDisplayed={3}
-              pageCount={pageCount}
-              previousLabel="<"
-              renderOnZeroPageCount={null}
-              className="flex gap-2 items-center"
-              pageClassName="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white"
-              pageLinkClassName="w-full h-full flex items-center justify-center"
-              previousClassName="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white"
-              nextClassName="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white"
-              activeClassName="!bg-primary text-white"
-            />
+            <Pagination>
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious
+                    className={currentPage === 1 ? 'pointer-events-none opacity-50' : ''}
+                    onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                  />
+                </PaginationItem>
+                {[...Array(pageCount)].map((_, index) => {
+                  const page = index + 1;
+                  if (
+                    page === 1 ||
+                    page === pageCount ||
+                    (page >= currentPage - 1 && page <= currentPage + 1)
+                  ) {
+                    return (
+                      <PaginationItem key={page}>
+                        <PaginationLink
+                          onClick={() => handlePageChange(page)}
+                          isActive={page === currentPage}
+                        >
+                          {page}
+                        </PaginationLink>
+                      </PaginationItem>
+                    );
+                  } else if (
+                    page === currentPage - 2 ||
+                    page === currentPage + 2
+                  ) {
+                    return (
+                      <PaginationItem key={page}>
+                        <PaginationEllipsis />
+                      </PaginationItem>
+                    );
+                  }
+                  return null;
+                })}
+                <PaginationItem>
+                  <PaginationNext
+                    className={currentPage === pageCount ? 'pointer-events-none opacity-50' : ''}
+                    onClick={() => handlePageChange(Math.min(pageCount, currentPage + 1))}
+                  />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
           </div>
         </div>
       </div>
@@ -68,3 +106,4 @@ const MenuPage = () => {
 };
 
 export default MenuPage;
+

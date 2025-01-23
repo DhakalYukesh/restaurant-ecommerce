@@ -1,4 +1,4 @@
-import Button from "@/components/generic/button";
+import Button from "@/components/generic/Button";
 import TitleBanner from "@/components/generic/title-banner";
 import MenuCardDetail from "@/components/menu/menucard-detail/menucard-detail";
 import { menuItems } from "@/lib/constant/menu.constant";
